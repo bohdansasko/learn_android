@@ -6,9 +6,44 @@
     android:layout_height="match_parent"
     tools:context="com.hillarious.bohdansasko.p0081viewbyid.MainActivity">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/helloWorld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+        />
+
+        <EditText
+            android:id="@+id/enty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="write some text"
+            android:layout_below="@+id/helloWorld"
+        />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ok"
+            android:layout_below="@+id/enty"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+        />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnOk"
+            android:layout_toLeftOf="@+id/btnOk"
+            android:text="Cancel"
+        />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
