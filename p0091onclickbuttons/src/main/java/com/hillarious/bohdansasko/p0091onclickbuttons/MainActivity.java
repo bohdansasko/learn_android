@@ -24,18 +24,24 @@ public class MainActivity extends AppCompatActivity {
         m_btnCancel = (Button)findViewById(R.id.btnCancel);
 
 
-        m_btnOk.setOnClickListener(new OnClickListener() {
+        OnClickListener btnListener = new OnClickListener() {
             @Override
             public void onClick(View v) {
-                m_tvOut.setText("Clicked button ok");
+                switch (v.getId()) {
+                    case R.id.btnOk:
+                        m_tvOut.setText("Clicked button ok");
+                        break;
+                    case R.id.btnCancel:
+                        m_tvOut.setText("Clicked button cancel");
+                        break;
+                    default:
+                        m_tvOut.setText("Clicked button doesn't known");
+                }
             }
-        });
-        m_btnCancel.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                m_tvOut.setText("Clicked button cancel");
-            }
-        });
+        };
+
+        m_btnOk.setOnClickListener(btnListener);
+        m_btnCancel.setOnClickListener(btnListener);
 
     }
 }
