@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Hello World!"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"
         />
         <Button
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Ok"
             android:layout_gravity="center_horizontal"
+            android:onClick="onClickButton"
         />
         <Button
             android:id="@+id/btnCancel"
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_gravity="center_horizontal"
+            android:onClick="onClickButton"
         />
 
     </LinearLayout>

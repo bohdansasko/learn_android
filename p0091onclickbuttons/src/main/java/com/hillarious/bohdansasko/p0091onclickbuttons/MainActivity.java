@@ -5,9 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     TextView m_tvOut;
     Button m_btnOk;
@@ -22,15 +21,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         m_tvOut = (TextView)findViewById(R.id.tvOut);
         m_btnOk = (Button)findViewById(R.id.btnOk);
         m_btnCancel = (Button)findViewById(R.id.btnCancel);
-
-        m_btnOk.setOnClickListener(this);
-        m_btnCancel.setOnClickListener(this);
-
     }
 
 
-    @Override
-    public void onClick(View v) {
+    public void onClickButton(View v) {
         switch (v.getId()) {
             case R.id.btnOk:
                 m_tvOut.setText("Clicked button ok");
