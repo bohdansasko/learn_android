@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hillarious.bohdansasko.learn.MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/helloWorld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+        <EditText
+            android:id="@+id/someText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="write some text"
+            android:layout_below="@+id/helloWorld"
+        />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ok"
+            android:layout_below="@+id/someText"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:layout_alignTop="@+id/btnOk"
+            android:layout_toLeftOf="@+id/btnOk"
+        />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
