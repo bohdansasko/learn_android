@@ -2,6 +2,7 @@ package com.hillarious.bohdansasko.p0091onclickbuttons;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     TextView m_tvOut;
     Button m_btnOk;
     Button m_btnCancel;
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +31,15 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.btnOk:
                 m_tvOut.setText("Clicked button ok");
+                Log.d(TAG, "Button ok");
                 break;
             case R.id.btnCancel:
                 m_tvOut.setText("Clicked button cancel");
+                Log.d(TAG, "Button Cancel");
                 break;
             default:
                 m_tvOut.setText("Clicked button doesn't known");
+                Log.d(TAG, "Button doesn't known");
         }
     }
 }
