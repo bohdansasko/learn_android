@@ -16,10 +16,11 @@
             android:id="@+id/helloWorld"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Hello World!"
+        />
 
         <EditText
-            android:id="@+id/someText"
+            android:id="@+id/enty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="write some text"
@@ -31,17 +32,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ok"
-            android:layout_below="@+id/someText"
+            android:layout_below="@+id/enty"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="10dp"
-            />
+        />
 
         <Button
+            android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cancel"
             android:layout_alignTop="@+id/btnOk"
             android:layout_toLeftOf="@+id/btnOk"
+            android:text="cancel"
         />
 
     </RelativeLayout>
