@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,10 +33,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnOk:
                 m_tvOut.setText("Clicked button ok");
                 Log.d(TAG, "Button ok");
+                Toast.makeText(this, "Clicked button ok", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnCancel:
                 m_tvOut.setText("Clicked button cancel");
                 Log.d(TAG, "Button Cancel");
+                Toast.makeText(this, "Clicked button cancel", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 m_tvOut.setText("Clicked button doesn't known");
